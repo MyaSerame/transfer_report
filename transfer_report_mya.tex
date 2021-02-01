@@ -1,0 +1,86 @@
+%
+% File    : transfer_report_mya.tex
+% Author  : Dineo Serame
+% Created : October  2019
+% ____________________________________________________________________________
+%
+% This file is part of thesis_template
+% thesis_template: Copyright (C) 2011-2019 Mauricio Villarroel.
+%
+% This program is free software; you can redistribute it and/or modify it
+% under the terms of the GNU General Public License version 2 as published 
+% by the Free Software Foundation; either version 2 of the License.
+%
+% This program is distributed in the hope that it will be useful, but
+% WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+% Public License for more details.
+% ____________________________________________________________________________
+%
+% DESCRIPTION :
+%
+% Sample DPhil thesis of the Engineering department of 
+% the University of Oxford
+% ____________________________________________________________________________
+
+
+\documentclass[report]{mvdocument}
+
+\makeglossaries
+\include{glossary}
+%\usepackage{float}
+
+
+
+%
+% Project author and metadata
+%
+
+\title              {Non-contact assessment of pneumonia in low and middle income countries}
+\author         {Dineo Serame}
+\college        {Hertford College}
+\universitylogo{oxford-logo}       % File name of the logo
+\supervisor  {Professor Lionel Tarassenko, Dr. Mauricio Villarroel}
+\degree        {}
+\department {Department of Engineering Science}
+\university    {University of Oxford}
+\degreedate {}
+
+%
+% Document contents
+%
+
+\begin{document}
+
+\frontmatter
+
+\maketitle
+
+% Comment the following lines if writing a small progress report
+\include{abstract}
+
+\tableofcontents
+\listoffigures
+\listoftables
+\listofabbreviations
+
+\mainmatter
+
+%\layout  %Used temporarly for checking layout
+
+\include{chap_introduction}
+\include{chap_literature_review}
+\include{chap_3-PPG_Signal_Processing}
+%\include{chap_4-RR_estimation}
+%\include{chap_5-Future_Work}
+
+%\appendix
+
+%\include{appendix_1}
+%\include{appendix_2}
+
+\backmatter 
+
+\listofreferences{references}
+
+\end{document}

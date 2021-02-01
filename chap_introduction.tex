@@ -1,30 +1,69 @@
 \chapter{Introduction}
 \label{chapter:introduction}
 
-It is widely reported, notably by the World Health Organisation \cite{stroetmann2010can}, that global changes in population demographics, the increased incidence of chronic diseases and the unmet needs for more personalised care are trends that need new integrated approaches to health and social care. 
+\section{Motivation}
 
-\lipsum[2-4]
+Despite a general improvement in living conditions, improved nutrition, introduction of vaccines and greater access to healthcare, pneumonia remains the biggest cause of mortality in children under the age of 5, accounting for more than 15\% of childhood deaths globally \cite{troeger2017estimates}. In 2011, there were an estimated 120 million episodes of childhood pneumonia globally, of which 14 million advanced to severe disease, leading to 1.3 million deceased cases. Most deaths (81\%) occurred in children under 2 years of age. The highest incidences of severe cases were in Southeast Asia (39\%) and Africa (30\%) \cite{zar2013pneumonia}. Hospitalisation of children with pneumonia in Low and Middle Income Countries (LMIC) increased from 7\% to 50\% between 2000 and 2015 \cite{mcallister2019global}. 
 
-\section{Monitoring of vital signs}
+Shortage of clinical expertise, high-quality treatment facilities and availability of adequate medical equipment in \gls{lmic} prevents early detection and treatment of pneumonia in children. Timely and accurate diagnosis that facilitates appropriate treatment could reduce mortality by as much as 42\% \cite{wardlaw2006pneumonia}. While high-income countries remain at the forefront of developing the latest mobile technologies used in healthcare, the rate of penetration of such technologies in \gls{lmic}s has recently exceeded that of their wealthier neighbours \cite{bastawrous2013mobile}. My research therefore aims to develop and implement low-cost, user friendly smart phone algorithms to assist the existing clinical staff in the diagnosis of childhood pneumonia in LMIC areas.
 
-The standard vital signs include temperature, \af{hr}, \af{rr}, blood pressure and, when appropriate, \af{spo2}. The routine measurement and interpretation of these vital signs is a core component of the physiological assessment of most patients \cite{prior1977physical,goldberg2005practical}, as they can provide critical information about the underlying state of their health. 
+\section{Pneumonia}
 
-\lipsum[2-4]
+Pneumonia is a highly prevalent acute respiratory infection. The disease is caused by pathogens such as bacteria, viruses or fungi causing an inflammation in the lungs. 
+The alveoli (the microscopic air sacks in the lungs where oxygen and carbon dioxide exchange occurs) get filled up with fluid and pus, decreasing lung compliance (the change in volume per unit change in pressure). This leads to reduced volume for gas exchange and difficulty in breathing, affecting oxygen supply to the bloodstream \cite{ali2013role}.
 
-\section{Clinical need}
+\subsection{Symptoms and causes}
 
-\lipsum[2-4]
+Children diagnosed with pneumonia often present symptoms of fast breathing, classified by the World Health Organisation (WHO) as having a respiratory rate (RR) $\geq$
+50 breaths/min in a child aged 2-11 months and $\geq$ 40 breaths/min in a child aged 1-5 years \cite{world2013pocket}. In most cases, illness begins as an upper respiratory tract infection and progresses gradually over several days, with increasing severity of cough and respiratory distress. To maintain an adequate supply of air in the lungs during the respiratory cycle with the decreased lung compliance caused by pneumonia, greater inspiratory force is needed. Consequently, the subcostal tissue on the chest is pulled inward during inspiration, producing what the WHO Integrated Management of Childhood Illness (IMCI) guidelines define as chest in-drawing \cite{mccollum2017outpatient}. Children with a cough, difficulty breathing and chest in-drawing are considered to have severe pneumonia. Very severe pneumonia can be detected from the presence of central cyanosis (blue colour tint in skin, hips or mucus membranes), a peripheral oxygen saturation (\gls{$SpO_{2}$}) < 90\%, severe respiratory distress or the inability to breastfeed  \cite{ayieko2007case}. 
+
+In severely ill infants and toddlers with a rapid onset and progression of symptoms of pneumonia, the bacteria \textit{Streptococcus pneumoniae} is often the predominant cause of infection. It is estimated to cause 18\% of severe cases and 33\% of deaths. In 2016, \textit{Streptococcus pneumoniae} was the leading cause of lower respiratory infection morbidity and mortality globally, contributing to more deaths than all other aetiologies combined \cite{troeger2018estimates}. Other important pathogens include \textit{Haemophilus influenzae type b (Hib)}, estimated to account for 4\% of severe episodes and 16\% of deaths; and \textit{influenza virus}, which is associated with approximately 7\% of severe episodes and 11\% of deaths. Stagno \textit{et al} \cite{stagno1981infant} found that the presence of more than one pathogen was significantly associated with more frequent requirements for oxygen and mechanical ventilation. These pathogens can infect a child either through air droplets (e.g. from a cough) or through contaminated blood (especially during and shortly after birth) and contribute to the progression of illness.
+ 
+\subsection{Diagnosis}
+
+Even though there are guidelines on recognising pneumonia, diagnosis can often be challenging because the clinical manifestation of pneumonia in children is variable \cite{shah2017does}. X-rays, in combination with arterial blood gas tests (ABGs), auscultation of the lungs using a stethoscope, heart rate, $SpO_{2}$, temperature and respiratory rate count are typically used as diagnostic mechanisms \cite{cherian2005standardized}. Signs of chronic airflow obstruction, hyperinflation and various abnormalities of chest wall motion are also used to diagnose pneumonia. The WHO recommends that community health workers treat pneumonia in children according to specific case-management algorithms and use respiratory rate (RR) and chest in-drawing for diagnosis \cite{world2011integrated}.  
+
+The measurement of other vital signs such as $SpO_{2}$, heart rate (HR) and temperature allows clinicians to have a more complete view of the child's physiology. These vital signs help guide the hospital admission decisions for pneumonia as well as the treatment of other accompanying diseases or complications \cite{majumdar2011oxygen}. RR, HR, and $SpO_{2}$ are monitored in those with severe pneumonia or requiring regular oxygen therapy. The gold standard for assessing oxygen saturation is arterial blood gas measurement. However, it is time consuming and invasive. Pulse oximetry is therefore commonly used in hospital settings to monitor pneumonia patients and has also been recommended for use in the community \cite{gupta2010oxygen}. 
+
+The most common methods to measure RR and HR are counting breaths using observation and auscultation of the heart respectively. However, it can be difficult to identify breaths and maintain a count when estimating RR by manually counting breaths. Clinically, RR is computed using electrodes attached to the patient's chest, a technique called impedance pneumography (IP) \cite{bailon2006robust}. This technique often requires expensive devices and therefore is not commonly used in LMICs. HR auscultation has similar challenges to counting breaths.
+
+\subsection{Treatment}
+
+ IMCI guidelines indicate when referral for pneumonia treatment is needed and specify the appropriate antimicrobial agents when referral is not needed. The guidelines state that treatment should target the bacterial causes most likely to lead to severe disease, including \textit{streptococcus pneumoniae }and \textit{Haemophilus influenzae.} Identification of the causative pathogen of pneumonia is however challenging as few children develop bacteraemic illness, where bacteria is present in the blood stream and detected through blood cultures \cite{zar2013pneumonia}. Furthermore, only a third of pneumonia cases can be attributed to a certain aetiology via culture, antigen detection or clinically available serological techniques \cite{mccracken2000diagnosis}. Most diagnostic tests for pneumonia pathogens have suboptimal diagnostic sensitivity. Blood cultures are frequently performed for hospitalised pneumonia patients but are positive only in <10\% of cases \cite{murdoch2009breathing}.
+ 
+A 2005 technical update of the WHO IMCI guidelines recommended the administration of amoxicillin (50 mg/kg per dose, in two divided doses), with co-trimoxazole as an alternative in the treatment of non-severe pneumonia in some settings. Treatment failure was defined in a child who develops pneumonia signs warranting immediate referral or who did not have a decrease in respiratory rate after 48 – 72 hours of therapy \cite{GRANT2009185}. Suitable recommended treatments include the administration of a high-dose antibiotic (i.e. amoxicillin–clavulanic acid) for children over 3 years of age. 
+
+Between 2010 and 2013, more than 54 countries supported by the Global Alliance for Vaccines and Immunisation (GAVI) issued recommendations for paediatric pneumonia treatment, implementing the pneumococcal conjugate vaccine protocols\cite{russell2019impact}. These recommendations were primarily intended for high to middle-income nations. However, new information on antimicrobial resistance, the changing epidemiology of pneumonia and the availability of a broader range of antimicrobial agents prompted the need to update the guidelines. With improved vaccine uptake, the prevalence of vaccine-targeted pathogens may diminish, while a greater proportion of cases may occur due to \textit{Staphylococcus aureus}, \textit{Klebsiella pneumoniae} and Mycobacterium tuberculosis in tuberculosis (TB) endemic areas such as Sub-Saharan Africa. \cite{zar2013pneumonia}. New guidelines are needed for antimicrobial treatment of non-severe pneumonia among children assessed by first-level health providers, often with basic health training.
+
+\section{Challenges in LMIC}
+
+Strategies for prevention, diagnosis and treatment of pneumonia are well documented and are mostly effective in resource-rich settings. However, the accuracy and viability of most diagnostic tools for pneumonia have not been assessed or validated in LMIC. The reference standard for the diagnosis of pneumonia is the extraction of fluid or tissue samples from the lower respiratory tract. Such invasive measures are reserved for patients with severe or life-threatening pneumonia who do not respond to first-line therapies. In general practice, a chest radiograph is considered a clinical reference standard for pneumonia given it is well studied in the literature, is readily available in low-resource settings and is less invasive. 
+
+Because of limited resources in  \gls{lmic}, timely diagnosis of pneumonia is a challenge. The WHO recommendations rely on simple clinical signs: tachypnoea or respiratory distress in a child with cough or difficulty breathing. Community health workers are trained to count the respiratory rate of a child with cough and/or difficulty breathing. The health workers determine whether the child has fast breathing or not based on how the child’s respiratory rate relates to generic cut-off thresholds. Counting the number of breaths is typically performed manually with the aid of watches or timers \cite {gadomski1993assessment}, \cite {noordam2015use}. However, even with these counting aids, measuring a child’s respiratory rate through visual observation requires focused concentration and can be challenging in a child who may be moving, crying or breathing rapidly. Inaccurate or imprecise measurements can stem from factors including poor visibility of the start or end of a breath, an irritable or moving child, or difficulty counting or remembering the count \cite{ginsburg2018systematic}. Until now, there has been limited evidence on the efficacy of technology and other affordable tools to help community health workers in resource-poor settings improve the classification of fast breathing or other breathing patterns for the diagnosis of pneumonia.
+
+The uncertainty surrounding the diagnosis of pneumonia has therefore contributed to antibiotic overuse in children with viral respiratory tract infections. Thus, there is an urgent need to rethink existing practises of using manual breath counts for RR estimation as a stand-alone criteria for diagnosing pneumonia. Cost effective, portable, non-contact methods can be useful in diagnosing pneumonia, particularly in LMIC. If diagnosed early, targeted antibiotic therapy can be initiated to effectively treat the disease. 
+
+Recent advances have shown that estimation of vital signs such as HR and RR through non-contact means is viable. This estimation can even be achieved using typical smart phone cameras. Such an approach would allow for the accurate estimation of these vital signs without requiring expensive specialised equipment and clinical expertise. These vital signs estimates, if made available in LMIC, may aid in the early detection and diagnosis of childhood pneumonia. 
 
 \section{Objectives}
 
-\lipsum[2-4]
+The main aim of my DPhil is to develop non-contact video based algorithms to identify breathing patterns and signs of respiratory distress in children diagnosed with pneumonia in LMIC using the video cameras available in smartphones. The algorithms will be implemented as a smartphone-based decision tool that will improve admission and referral decision making, reduce the use of broad-spectrum antibiotics (reserving these only for severe pneumonia cases in line with WHO guidelines) and help reduce the problem of antimicrobial resistance (AMR).  In order to do so, the two main areas of research are:
+
+\begin{enumerate}
+\item The development of algorithms that can accurately estimate vital signs using a smartphone camera.
+\item The development of machine learning algorithms for the classification of respiratory patterns in chßildren diagnosed with pneumonia.
+\end{enumerate}
 
 \section{Contributions}
 
-\lipsum[2-4]
+The major contributions made during my first year of DPhil are:
 
-\section{Outline of document}
+ \begin{enumerate}
+\item Development of signal processing algorithms to assess the quality of the information recorded by wearable devices and estimate vital signs such as HR, RR and \gls{$SpO_{2}$}.
 
-\Cref{chapter:literature_review} discusses .... . The clinical study undertaken as part of this project is presented in \Cref{chapter:dataset} with a detailed description of the patient population, the data collection process and an overview of the main vital signs used as the reference data....
+\item Development of image and video processing algorithms to extract respiratory and cardiac image plethysmography (PPGi) signals from video data recorded from infants in the Neonatal Intensive Care Unit (NICU). From the physiological signal extracted, I developed algorithms to estimate HR and RR.
+\end{enumerate}
 
-\lipsum[2-4]
+\section{Outline of the report}
+
+This report is composed of 5 chapters. Chapter 1 discusses the motivation and objectives of this research. Chapter 2 reviews the background literature and current state-of-the-art technology to diagnose pneumonia. Chapter 3 describes signal processing methods used to compute physiological parameters from wearable devices. Chapter 4 discusses methods used to estimate vital signs from video cameras. Finally, chapter 5 concludes the report and discusses areas of future research work.
